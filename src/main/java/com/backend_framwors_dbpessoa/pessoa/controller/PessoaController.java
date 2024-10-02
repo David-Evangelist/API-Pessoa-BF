@@ -30,7 +30,8 @@ public class PessoaController {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(savePessoa);
     }
-
+    
+    @GetMapping("/products/{id}")
     public ResponseEntity<Object> getPessoaById(@PathVariable UUID id){
         Optional<Pessoa> foundPessoa = pessoaRepository.findById(id);
         if(foundPessoa.isEmpty()){
