@@ -1,5 +1,5 @@
 package com.backend_framwors_dbpessoa.pessoa.dto;
 
-public class PessoaDto {
+public record PessoaDto(String name, String cpf, int idade) {
 
 }
